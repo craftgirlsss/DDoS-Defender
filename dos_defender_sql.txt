@@ -1,0 +1,6 @@
+1. sqlite3 dos_attacks.db "CREATE TABLE IF NOT EXISTS attack_logs (id INTEGER PRIMARY KEY AUTOINCREMENT, ip TEXT, timestamp TEXT);"
+2. gcc dos_detection_daemon.c -o dos_daemon -lpcap -lsqlite3
+3. sudo ./dos_daemon
+
+// Cek Log Serangan di Database
+sqlite3 dos_attacks.db "SELECT * FROM attack_logs;"

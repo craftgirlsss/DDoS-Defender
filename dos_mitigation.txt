@@ -1,0 +1,7 @@
+1. sudo touch /var/log/dos_detection.log
+2. sudo chmod 666 /var/log/dos_detection.log
+3. gcc dos_detection_daemon.c -o dos_daemon -lpcap
+4. sudo ./dos_daemon
+
+// Checking Log 
+5. tail -f /var/log/dos_detection.log
